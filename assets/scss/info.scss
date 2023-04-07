@@ -32,14 +32,17 @@ main{
     .img{
         width: 150px;
         height: 150px;
+        color: white;
         border-radius: 50%;
-        background: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8));
+        background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3));
+        animation: cambiarLogo 5s linear infinite;
     }
     .titulo{
         padding: 1rem;
         text-align: center;
         font-family: var(--fuente-titulos);
         font-size: var(--tamaño-titulo);
+        animation: pulse 3s linear infinite;
     }
     .sub-info{
         padding: 1rem;
@@ -72,7 +75,14 @@ main{
         display: grid;
         grid-template-columns: 1fr 3fr;
         padding: 1rem;
+        animation: heartBeat 2s linear ;
     }
+    .boton:nth-child(1){animation-delay: .2s;}
+    .boton:nth-child(2){animation-delay: .4s;}
+    .boton:nth-child(3){animation-delay: .6s;}
+    .boton:nth-child(4){animation-delay: .8s;}
+    .boton:nth-child(5){animation-delay: 1s;}
+    .boton:nth-child(6){animation-delay: 1.2s;}
     .boton:hover{
         cursor: pointer;
         background: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8));
@@ -82,6 +92,19 @@ main{
     0%{background-position: 0 50%;}
     50%{background-position: 100% 50%;}
     100%{background-position: 0 50%;}
+}
+@keyframes cambiarLogo{
+    10%{background: linear-gradient(45deg, rgba(0,0,0,.3),rgba(0,0,0,.4));}
+    20%{background: linear-gradient(45deg, rgba(0,0,0,.4),rgba(0,0,0,.5));}
+    30%{background: linear-gradient(45deg, rgba(0,0,0,.5),rgba(0,0,0,.6));}
+    40%{background: linear-gradient(45deg, rgba(0,0,0,.6),rgba(0,0,0,.7));}
+    50%{background: linear-gradient(45deg, rgba(0,0,0,.7),rgba(0,0,0,.8));}
+    60%{background: linear-gradient(45deg, rgba(0,0,0,.8),rgba(0,0,0,.7));}
+    70%{background: linear-gradient(45deg, rgba(0,0,0,.7),rgba(0,0,0,.6));}
+    80%{background: linear-gradient(45deg, rgba(0,0,0,.6),rgba(0,0,0,.5));}
+    90%{background: linear-gradient(45deg, rgba(0,0,0,.5),rgba(0,0,0,.4));}
+    100%{background: linear-gradient(45deg,rgba(0,0,0,.4),rgba(0,0,0,.3));}
+    
 }
 
 @media screen and (min-width:350px) {
